@@ -9,8 +9,11 @@
 {% bootstrap_messages %}
 {% load static from staticfiles%}
 
+{% static 'static_jquery/js/jquery.js' %}
+
 <html  lang="en">
  <head>
+
 
  </head>
 <body>
@@ -36,10 +39,6 @@
   </div><!--/.end row -->
   </div>
   </nav> <!--/.navbar-collapse -->
-
-
-
-
       <div class="row">
   <div class="container">
             <br></br>
@@ -59,31 +58,60 @@
       </label>
     </div>
     <button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
-  </form>
+      </form>
 </div>
 
+<div class="row">
+<div class="col-md-7 " style ='background-color:'>
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#Methods of payment">Methods of payment</a></li>
+    <li><a data-toggle="pill" href="#promotions">promotions</a></li>
+    <li><a data-toggle="pill" href="#The minimum price">The minimum price</a></li>
+  </ul>
 
-<div class="col-md-9">
+  <div class="tab-content">
+    <div id="Methods of payment" class="tab-pane fade in active">
+      <p>Some content.<br></p>
+    </div>
+    <div id="promotions" class="tab-pane fade">
+    <p> Some content</p>
+    <div id="The minimum price" class="tab-pane fade">
+      <p>Some content in menu 2.<br></p>
+    </div>
+  </div>
+</div>
+</div>
 
-    <h2>Menu</h2>
-    <table class="table">
+<h2>Ürünlerimiz<h2>
 
+
+
+
+
+    <div class="col-md-9 " style ='background-color:'>
+    <table class="table" id="menutable" name="menutable"  >
       <tbody>
-        <tr class="success">
-          <td>Çiğköfte</td>
-          <td>Muhteşem sunumu ile hazırlanmış, güzel 300gr çiğköfte...</td>
-          <td><p>30₺<a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></p></td>
 
+        <tr class="danger">
+          <td class="nf">Çiğköfte</td>
+          <td>Muhteşem sunumu ile hazırlanmış, güzel 300gr çiğköfte...</td>
+          <td class="nr"  id="price_id">32</td>
+          <td>  <button type="button" class="use-address" /></td>
           </tr>
+                  <tr class="danger">
+                    <td class="nf">Çiğköfte</td>
+                    <td>Muhteşem sunumu ile hazırlanmış, güzel 300gr çiğköfte...</td>
+                    <td class="nr"  id="price_id">32</td>
+                    <td>  <button type="button"    class="use-address" /></td>
+                    </tr>
 
       </tbody>
-    </table>
-  </div>
-
-
-
-
-
-
+    </table></div>
   </div><!--/.end row-->
 </div><!--/.end container -->
+
+
+
+
+</body>
+</html
